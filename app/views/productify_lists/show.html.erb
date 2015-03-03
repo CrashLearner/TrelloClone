@@ -1,0 +1,21 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @productify_list.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @productify_list.description %>
+</p>
+
+<div id="productify_tasks_wrapper">
+	<%= render @productify_list.productify_tasks %>
+	<div id="form">
+		<%= render "productify_tasks/form" %>
+	</div>
+</div>
+
+<%= link_to 'Edit', edit_productify_list_path(@productify_list) %> |
+<%= link_to 'Back', productify_lists_path %>

@@ -1,0 +1,4 @@
+<%= form_for([@productify_list, @productify_list.productify_tasks.build]) do |f| %>
+	<%= f.text_field :content, placeholder: "New Task" %>
+	<%= f.submit %>
+<% end %>
