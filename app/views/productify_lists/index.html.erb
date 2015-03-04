@@ -1,29 +1,11 @@
-<p id="notice"><%= notice %></p>
+<% @productify_lists.each do |productify_list| %>
+  <div class="index_row clearfix">
+    <h2 class="productify_list_title"><%= link_to productify_list.title, productify_list %></h2>
+    <p class="productify_list_sub_title"><%= productify_list.description %></p>
+  </div>
+<% end %>
 
-<h1>Listing Productify Lists</h1>
+<div class="links">
+  <%= link_to "New Productify List", new_productify_list_path %>
+</div>
 
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Description</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @productify_lists.each do |productify_list| %>
-      <tr>
-        <td><%= productify_list.title %></td>
-        <td><%= productify_list.description %></td>
-        <td><%= link_to 'Show', productify_list %></td>
-        <td><%= link_to 'Edit', edit_productify_list_path(productify_list) %></td>
-        <td><%= link_to 'Destroy', productify_list, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Productify list', new_productify_list_path %>

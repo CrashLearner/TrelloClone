@@ -1,14 +1,8 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @productify_list.title %>
-</p>
+<h2 class="productify_list_title"><%= @productify_list.title %></h2>
+<p class="productify_list_sub_title"><%= @productify_list.description %></p>
 
-<p>
-  <strong>Description:</strong>
-  <%= @productify_list.description %>
-</p>
 
 <div id="productify_tasks_wrapper">
 	<%= render @productify_list.productify_tasks %>
@@ -17,5 +11,8 @@
 	</div>
 </div>
 
-<%= link_to 'Edit', edit_productify_list_path(@productify_list) %> |
-<%= link_to 'Back', productify_lists_path %>
+<div class="links">
+	<%= link_to 'Edit', edit_productify_list_path(@productify_list) %> |
+	<%= link_to 'Back', productify_lists_path %> |
+	<%= link_to 'Delete', productify_list_path(@productify_list), method: :delete, data: { confirm: "Are you Sure?" } %>
+</div>

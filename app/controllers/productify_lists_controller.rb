@@ -56,7 +56,7 @@ class ProductifyListsController < ApplicationController
   def destroy
     @productify_list.destroy
     respond_to do |format|
-      format.html { redirect_to productify_lists_url, notice: 'Productify list was successfully destroyed.' }
+      format.html { redirect_to root_url, notice: 'Productify list was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
