@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150302225020) do
+ActiveRecord::Schema.define(version: 20150303191710) do
 
   create_table "productify_lists", force: :cascade do |t|
     t.string   "title"
@@ -25,6 +25,7 @@ ActiveRecord::Schema.define(version: 20150302225020) do
     t.integer  "productify_list_id"
     t.datetime "created_at",         null: false
     t.datetime "updated_at",         null: false
+    t.datetime "completed_at"
   end
 
   add_index "productify_tasks", ["productify_list_id"], name: "index_productify_tasks_on_productify_list_id"

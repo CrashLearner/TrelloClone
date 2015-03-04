@@ -1,3 +1,23 @@
-<p><%= productify_task.content %></p>
-
-<%= link_to "Delete", productify_list_productify_task_path(@productify_list, productify_task.id), method: :delete, data: { confirm: "Are you sure?" } %>
+<div class="row clearfix">
+	<% if productify_task.completed? %>
+		<div class="complete">
+			<%= link_to "Mark as Complete", complete_productify_list_productify_task_path(@productify_list, productify_task.id), method: :patch %>
+		</div>
+		<div class="productify_task">
+			<p style="opacity: 0.4;"><strike><%= productify_task.content %></strike></p>
+		</div>
+		<div class="trash">
+			<%= link_to "Delete", productify_list_productify_task_path(@productify_list, productify_task.id), method: :delete, data: { confirm: "Are you sure?" } %>
+		</div>
+	<% else %>
+		<div class="complete">
+			<%= link_to "Mark as Complete", complete_productify_list_productify_task_path(@productify_list, productify_task.id), method: :patch %>
+		</div>
+		<div class="productify_task">
+			<p><%= productify_task.content %></p>
+		</div>
+		<div class="trash">
+			<%= link_to "Delete", productify_list_productify_task_path(@productify_list, productify_task.id), method: :delete, data: { confirm: "Are you sure?" } %>
+		</div>
+	<% end %>
+</div>
