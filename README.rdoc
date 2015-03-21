@@ -1,28 +1,5 @@
-== README
+This Clone was made as a Ruby on Rails Tutorial and styled only with custom styling. Ths is a simple app built with the idea of 
+having List items and embedded Tasks and all with CRUD (create, read, update, destroy) ability.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Go to www.crashlearner.com for more info/tutorials.
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
